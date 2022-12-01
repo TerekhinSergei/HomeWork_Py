@@ -1,0 +1,15 @@
+Gerald Ross, 15750.0
+Herman Lawrence, 18600.0
+Herman Price, 22500.0
+Joe Reeves, 21000.0
+Laura Rodriguez, 19200.0
+LISA MONTGOMERY, 27062.0
+Marie Murphy, 15000.0
+Mary Curry, 15750.0
+Matthew Lopez, 16650.0
+Minnie Walker, 16500.0
+NANCY JONES, 24042.0
+Ryan Rice, 17250.0
+Sheila Wood, 21750.0
+Teresa Williams, 21300.0
+Thomas Jones, 17700.0

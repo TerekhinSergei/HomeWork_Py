@@ -11,3 +11,15 @@ for i in num:
         sum += int(i)           
 
 print(sum)
+
+##############
+float_num = float(input('Введите вещественное число: '))
+float_num = abs(float_num)  # убирается минус
+while float_num != int(float_num):
+    float_num = round(float_num*10, 10)
+sum_digits = 0
+while float_num > 0:
+    sum_digits += float_num % 10
+    float_num //= 10
+print(sum_digits)
+

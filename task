@@ -1,0 +1,63 @@
+
+# print(ord('→'))
+# print(chr(8594))
+# print(ord('↑'))
+# print(chr(8593))
+# print(ord('←'))
+# print(chr(8592))
+# print(ord('↓'))
+# # print(chr(8595))
+
+
+# people = int(input('Количество человек в кругу: '))
+# count = int(input('Какое число счета (для выбывания)? '))
+# list_of_people = list(range(1, people + 1))
+# print(f'список {list_of_people}')
+# list_of_money = [list_of_money * 0 for list_of_money in list_of_people]
+# print(f'список m {list_of_money}')
+# # out_index = 0
+# for i in range(people - 1):
+#     data.write(f'Текущий круг людей {list_of_people}\n')
+#     start_index = out_index % len(list_of_people)
+#     out_index = (start_index + count - 1) % len(list_of_people)
+#     data.write(f'Выбывает человек под номером {list_of_people[out_index]}\n\n')
+#     list_of_people.remove(list_of_people[out_index])
+
+# print(f'Остался человек под номером {list_of_people[0]}')
+# data.write(f'Остался человек под номером {list_of_people[0]}\n')
+
+
+# list_of_people = list_of_people[count:people] + list_of_people[0:count-1]
+# print(f'новый писок {list_of_people}')
+# list_of_people[4:5] = [11,11,11,11,11,11]
+# print(f'совсем новый писок {list_of_people}')
+
+
+# import time
+
+# interval = input('введите начало и конец диапазона (через пробел): ').split(' ')
+# minimum = int(interval[0])
+# maximum = int(interval[1])
+# now = str(time.monotonic_ns())
+# print(now)
+# rnd =int(minimum + int(now[8:10])/100 * (maximum-minimum))
+# print(F'случайное число в дипазоне ({minimum},{maximum}) -> {rnd}')
+
+
+def get_multip(num):
+    mul = []
+    for i in num:
+        if i % 2 == 0:
+            mul.append((i, i**2))
+    return mul
+
+#num = [1, 2, 5, 7, 8, 21, 23, 27, 38]
+
+num ="1,2,5,7,8,21,23,27,38".split(',')
+print(f'num - {num}')
+num = list(map(int,num))
+print(f'num = {num}')
+mult = list(filter(lambda i: i % 2 == 0, num))
+print(f'mult = {mult}')
+mult = list(map(lambda i: (i, i**2), mult))
+print(f'{num} -> {mult}')

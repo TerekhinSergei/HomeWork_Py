@@ -1,5 +1,5 @@
 # Создайте программу для игры в ""Крестики-нолики"".
-# Романом предложено игровое поле вида [['*','*','*'],['*','*','*'],['*','*','*']]
+# Предложено игровое поле вида [['*','*','*'],['*','*','*'],['*','*','*']]
 
 from typing import List
 
@@ -20,7 +20,8 @@ def put_symbol(simbol: str):
     """ 
     simbol_insert = False
     while not simbol_insert:        
-        answer = input(f'Введите позицию игрового поля (две цифры через пробел) куда поставим {simbol}? > ').split(' ')
+        answer = input(f'Введите позицию игрового поля (две цифры через пробел) куда поставим {simbol}? > ')
+        answer = answer.split(' ') if ' ' in answer else [False, False]
         answer_line = answer[0]
         answer_pos = answer[1]        
         try:

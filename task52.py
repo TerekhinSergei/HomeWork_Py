@@ -45,7 +45,7 @@ else:
     player2_name = '"БОТ-любитель конфет"'
 
 kucha = give_int_num('Введите количество конфет в куче: > ')
-max_out = give_int_num('введите максимальное количество забираемых конфет: > ')
+max_out = give_int_num('введите максимальное количество забираемых конфет: > ', max_num = kucha/3)
 print(f'Итак:\n На столе лежит {kucha} конфет. Играют {player1_name} и {player2_name} делая ход друг после друга. Первый ход определяется жеребьёвкой. За один ход можно забрать не более чем {max_out} конфет. Все конфеты достаются сделавшему последний ход.\n')
 _ = input('ГОТОВЫ?')
 
@@ -67,8 +67,8 @@ while kucha > 0:
     else:
         player_name = player2_name
 
-    # if kucha <= max_out:
-    #     max_out = kucha
+    if kucha <= max_out:
+         max_out = kucha
 
     if game_type:
         out_pts = give_int_num(

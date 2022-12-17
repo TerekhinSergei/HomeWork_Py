@@ -28,14 +28,14 @@ def change_spisok(spisok: List[str], accept: str) -> str:
 
 file_spisok = open('vedomost.txt', 'r', encoding='utf-8') 
 lines_spisok = file_spisok.read().split('\n')  ## читаем из файла
-file_spisok.close
+file_spisok.close()
 
 spisok_new = change_spisok(lines_spisok, accept='5') ## меняем текст в файле
 
 ## перезапись в исходный файл 'vedomost.txt'
 file_spisok = open('vedomost.txt', 'w', encoding='utf-8') 
 file_spisok.write(spisok_new)
-file_spisok.close
+file_spisok.close()
 
 ## запись в новый файл 'vedomost_new.txt'
 # spisok_new=change_spisok(lines_spisok, accept='5')

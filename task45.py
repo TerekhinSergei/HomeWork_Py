@@ -6,6 +6,9 @@
 # Первая функция - текст зашифровывает
 # Вторая - расшифровывает
 
+from typing import List
+
+
 def get_rle_encode(string_for_encoding:str) -> str:
     """
     Принимает строку для RLE кодирования. Возвращает сжатую cтроку. АЛГОРИТМ МОДИФИЦИРОВАН - если символ не повторяется, возвращается просто символ(без 1)
@@ -52,7 +55,7 @@ def get_rle_decode(string_for_decoding:str) -> str:
 ## читаем из файл исходный текст
 file_initial = open('initial_rle.txt', 'r', encoding='utf-8') 
 initial_text = file_initial.read()
-file_initial.close
+file_initial.close()
 
 #print('исходный текст:\n', initial_text)
 
@@ -60,13 +63,13 @@ cod_text = get_rle_encode(initial_text) ## кодируем текст(сжим�
 
 file_encode = open('encode.txt', 'w', encoding='utf-8') 
 file_encode.write(cod_text) ## записываем в файл закодированный (сжатый) текст
-file_encode.close
+file_encode.close()
 
 print('закодированный (сжатый) текст: ', cod_text)
 
 file_encode = open('encode.txt', 'r', encoding='utf-8') 
 text = file_encode.read()  ## читаем из файла закодированный (сжатый) текст
-file_encode.close
+file_encode.close()
 
 decod_text = get_rle_decode(text) ## декодируем текст (восстанавливаем)
 
@@ -80,4 +83,14 @@ print('\nраскодированный текст:\n', decod_text)
 # print('encoding_text ', cod_text)
 
 
+def read_data_list(filename: str ) -> List[str]:
+
+    with open(filename, 'r') as file:
+        data = file.read().rstrip().split('\n')
+    return data
+
+def write_data_list(filename: str , string: str ) -> List[str]:
+
+    with open(filename, 'w') as file:
+        data = file.write(string)
 

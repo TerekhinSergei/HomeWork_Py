@@ -6,19 +6,7 @@
 
 import random
 import math
-
-def create_list(numbers: list) -> list:
-    """
-    Спрашивает количество элементов и возвращает список, стоящий из случайных целых чисел
-    
-    Args:
-        list - пустой список
-    Returns:
-        list - список целых чисел
-    """      
-    for i in range(int(input('Введите количество элементов списка: '))):
-        numbers.append(random.randint(1,9))
-    return numbers   
+from functions import create_list, List
 
 def get_list_product_pairs_elements(numbers: list) -> list:
     """
@@ -34,7 +22,7 @@ def get_list_product_pairs_elements(numbers: list) -> list:
         product_list.append(numbers[i]*numbers[-(i+1)])
     return product_list   
 
-numbers = []
-print(f'исходный список {create_list(numbers)}')  
+numbers = create_list()
+print(f'исходный список {numbers}')  
 print(f'произведение пар элементов = {get_list_product_pairs_elements(numbers)}')
 

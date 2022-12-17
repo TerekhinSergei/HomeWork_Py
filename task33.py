@@ -29,7 +29,7 @@ def get_part_after_point(numbers: list) -> list:
         list - преобразованный список
     """              
     for n in numbers:        
-        parts_list.append(float(n)-int(n))
+        parts_list.append(round(float(n)-int(n),10))
     return parts_list
 
 #numbers = [4.07, 5.1, 8.2444, 6.9814]

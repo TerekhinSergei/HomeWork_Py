@@ -33,10 +33,8 @@ def get_multiplier_list(num: int) -> list:
         while not num % i:
             if not mult.count(i):
                 mult.append(i)
-            num //= i            
-            i = i            
-        else:
-            i += 1            
+            num //= i           
+        i += 1            
     return mult
 
 

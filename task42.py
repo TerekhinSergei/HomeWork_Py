@@ -11,13 +11,14 @@ def get_unical_num(num: List[int]) -> List[int]:
     Возвращает список уникальных элементов списка
 
     Args:
-    numbers - список целых чисел
+    List[int] - список целых чисел
     Returns:
-    list - список целых чисел
+    List[int] - список целых чисел
     """
     mul =[]
     for i in num:     
         if not mul.count(i):
+        #if i not in mul:
                 mul.append(i) 
         mul.sort()   
     return mul

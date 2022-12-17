@@ -12,17 +12,18 @@ def convert_binary(num: int) -> list:
         int - число которое требуется перевестив двоичную систему
     Returns:
         list - список разрядов двоичного числа
-    """    
+    """ 
+    binar = []   
     if not num:
         binar.reverse()
-        return binar
+        binary = "".join(map(str,binar))
+        return binary
     binar.append(num % 2)
     convert_binary(num // 2) 
     
 num = int(input('введите число: '))
-binar = []
-convert_binary(num)
-print(f'число {num} в двоичной системе -> ', end='')
+#convert_binary(num)
+print(f'число {num} в двоичной системе -> {convert_binary(num)}', end='')
 for i in binar:
     print(i, end='')
 #print("".join(map(str,binar)))

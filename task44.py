@@ -22,12 +22,15 @@ def get_encript_text(alfabet: str, text: str, key: int) -> str:
     alfabet_long = len(alfabet)
     for simbol in text: 
         i = 0               
+        #index =alfabet.find(simbol)
         for s in alfabet:
+            index =alfabet.find(simbol)
             if simbol == s:
                 index = i + key
             i +=1
         if index > alfabet_long:
             index -= alfabet_long
+        #index = (index+key)%alfabet_long
         en_text += alfabet[index]
     return en_text
 
@@ -67,19 +70,19 @@ key = 5
 en_text = get_encript_text(alfabet, initial_text, key) ## шифруем текст
 file_encript = open('encript.txt', 'w', encoding='utf-8') 
 file_encript.write(en_text) ## записываем зашифрованный файл
-file_encript.close
+file_encript.close()
 
 print('текст зашифрован см. file "encript.txt"') 
 key = give_int_num('Введите ключ дешифрования (вправо положительной число, влево - отрицательное)\nПОСКАЗКА - введите "5": ')
 
 file_encript = open('encript.txt', 'r', encoding='utf-8') 
 enс_text = file_encript.read() ## читаем зашифрованный файл
-file_encript.close
+file_encript.close()
 
 de_text = get_decript_text(alfabet, enс_text, key) ## расшифровываем текст
 
 file_decript = open('decript.txt', 'w', encoding='utf-8') 
 file_decript.write(de_text) ## записываем расшифрованный файл
-file_decript.close
+file_decript.close()
 
 print('файл расшифрован см. file "decript.txt"')

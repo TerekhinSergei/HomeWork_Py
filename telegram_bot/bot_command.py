@@ -1,7 +1,6 @@
 from telegram.ext import CallbackContext
 from telegram import Update
 from anecAPI import anecAPI
-# import datetime
 import time, math
 from logger import write_log
 
@@ -60,6 +59,7 @@ def sum_command(update: Update, context: CallbackContext):
         else:
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}, возможно это не цифры')
 
+
 def sub_command(update: Update, context: CallbackContext):
     write_log(update, context)
     message = update.message.text
@@ -113,7 +113,6 @@ def div_command(update: Update, context: CallbackContext):
         else:
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}, возможно это не цифры')
             
-
 
 def pow_command(update: Update, context: CallbackContext):
     write_log(update, context)

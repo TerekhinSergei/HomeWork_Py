@@ -55,7 +55,7 @@ def sum_command(update: Update, context: CallbackContext):
         elif not items[1].isalpha() and not items[2].isalpha():
             x = float(items[1])
             y = float(items[2])
-            update.message.reply_text(f'{x} + {y} = {x + y}')
+            update.message.reply_text(f'{x} + {y} = {round(x + y), 6}')
         else:
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}, возможно это не цифры')
 
@@ -73,7 +73,7 @@ def sub_command(update: Update, context: CallbackContext):
         elif not items[1].isalpha() and not items[2].isalpha():
             x = float(items[1])
             y = float(items[2])
-            update.message.reply_text(f'{x} - {y} = {x - y}')
+            update.message.reply_text(f'{x} - {y} = {round(x - y), 6}')
         else:
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}, возможно это не цифры')
 
@@ -91,7 +91,7 @@ def prod_command(update: Update, context: CallbackContext):
         elif not items[1].isalpha() and not items[2].isalpha():
             x = float(items[1])
             y = float(items[2])
-            update.message.reply_text(f'{x} * {y} = {round(x * y, 5)}')
+            update.message.reply_text(f'{x} * {y} = {round(x * y, 6)}')
         else:
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}, возможно это не цифры')
 
@@ -109,7 +109,7 @@ def div_command(update: Update, context: CallbackContext):
         elif not items[1].isalpha() and not items[2].isalpha():
             x = float(items[1])
             y = float(items[2])
-            update.message.reply_text(f'{x} : {y} = {round(x/y, 5)}')
+            update.message.reply_text(f'{x} : {y} = {round(x/y, 6)}')
         else:
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}, возможно это не цифры')
             
@@ -127,7 +127,7 @@ def pow_command(update: Update, context: CallbackContext):
         elif not items[1].isalpha() and not items[2].isalpha():
             x = float(items[1])
             y = float(items[2])
-            update.message.reply_text(f'{x}^{y} = {round(x**y, 5)}')
+            update.message.reply_text(f'{x}^{y} = {round(x**y, 6)}')
         else:
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}, возможно это не цифры')
      
@@ -144,7 +144,7 @@ def sqr_command(update: Update, context: CallbackContext):
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}')    
         elif not items[1].isalpha():
             x = float(items[1])    
-            update.message.reply_text(f'корень из {x} = {round(math.sqrt(x), 5)}')
+            update.message.reply_text(f'корень из {x} = {round(math.sqrt(x), 6)}')
         else:
             update.message.reply_text(f'Некорректный ввод. Вы ввели {message}, возможно это не цифры')
      

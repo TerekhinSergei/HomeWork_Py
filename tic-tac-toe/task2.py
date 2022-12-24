@@ -1,7 +1,7 @@
 import TicTacToe3 as TTT3
 
 
-check = input("Привет!\nПрелагаю сыграть в крестики-нолики\nВведи 'Д' or 'Y' если согласен, иначе просто нажми <интер>: ")
+check = input("Привет!\nПредлагаю сыграть в крестики-нолики\nВведи 'Д' or 'Y' если согласен, иначе просто нажми <интер>: ")
 
 if check.lower() == 'д' or check.lower() == 'y':
     game = True
@@ -18,4 +18,4 @@ else:
     if check.lower() == 'д' or check.lower() == 'y':
         TTT3.showProbability()
 
-print('программа завершена')
+print('Программа завершена. Приходи ещё.')
